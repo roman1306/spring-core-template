@@ -5,9 +5,9 @@ public class Item {
     private long id;
     private String name;
     private double price;
-    private String color;
+    private Color color;
 
-    public Item(long id, String name, double price, String color) {
+    public Item(long id, String name, double price, Color color) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -38,11 +38,11 @@ public class Item {
         this.price = price;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 }
