@@ -1,11 +1,17 @@
 package com.epam.edu.spring.core.template.repository;
 
+import com.epam.edu.spring.core.template.annotation.RandomInt;
 import com.epam.edu.spring.core.template.entity.Item;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+import java.util.LinkedList;
 
 /**
  * Репозиторий, основанный на классе LinkedList.
  * initialSequence должен случайно генерироваться из диапазона от 1 до 100
  */
+@Component
 public class LinkedListItemRepository extends AbstractRepository<Item> implements ItemRepository {
 
     @Override
@@ -18,11 +24,13 @@ public class LinkedListItemRepository extends AbstractRepository<Item> implement
         return false;
     }
 
+    @RandomInt(min = 1, max = 100)
     void setInitialSequence(int val) {
-        //TODO
+        initialSequence = val;
     }
 
+    @PostConstruct
     void setHolder() {
-        //TODO
+        holder = new LinkedList<>();
     }
 }

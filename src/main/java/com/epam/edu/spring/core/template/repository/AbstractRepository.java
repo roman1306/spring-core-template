@@ -17,4 +17,11 @@ public abstract class AbstractRepository<T> {
 
     abstract void setHolder();
 
+    @Override
+    public String toString() {
+        return "AbstractRepository{" +
+                "initialSequence=" + initialSequence +
+                ", holder=" + holder.getClass().getTypeName() +
+                '}';
+    }
 }
