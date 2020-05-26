@@ -1,5 +1,8 @@
 package com.epam.edu.spring.core.template.entity;
 
-public enum Color {
+import org.springframework.stereotype.Component;
 
+@Component
+public enum Color {
+    RED, GREEN, BLUE;
 }
