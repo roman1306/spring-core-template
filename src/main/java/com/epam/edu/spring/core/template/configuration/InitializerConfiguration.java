@@ -2,7 +2,6 @@ package com.epam.edu.spring.core.template.configuration;
 
 import com.epam.edu.spring.core.template.entity.Color;
 import com.epam.edu.spring.core.template.factory.ColorFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
@@ -17,7 +16,7 @@ public class InitializerConfiguration {
     public Color color() {
         Color[] colors = Color.values();
         return colors[new Random().nextInt(colors.length)];
-    }
+}
 
     @Bean
     @Lazy

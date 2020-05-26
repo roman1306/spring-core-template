@@ -5,9 +5,11 @@ import com.epam.edu.spring.core.template.service.SimpleItemService;
 import com.epam.edu.spring.core.template.validator.ItemValidator;
 import com.epam.edu.spring.core.template.validator.SimpleItemValidator;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+@ComponentScan("com.epam.edu.spring.core.template.service")
 public class ServiceConfiguration {
     @Bean
     public ItemValidator itemValidator() {

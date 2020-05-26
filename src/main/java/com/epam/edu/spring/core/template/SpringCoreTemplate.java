@@ -3,6 +3,7 @@ package com.epam.edu.spring.core.template;
 import com.epam.edu.spring.core.template.configuration.MainConfiguration;
 import com.epam.edu.spring.core.template.entity.Color;
 import com.epam.edu.spring.core.template.factory.ColorFactory;
+import com.epam.edu.spring.core.template.repository.ArrayListItemRepository;
 import com.epam.edu.spring.core.template.repository.ItemRepository;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -21,7 +22,10 @@ public class SpringCoreTemplate {
             System.out.println(color1 + " " + color2 + " " + (color1.equals(color2)));
         }
 
-		System.out.println(context.getBean("simpleItemServiceWithConstructor"));
+        System.out.println(context.getBean("simpleItemServiceWithConstructor"));
         System.out.println(context.getBean("simpleItemServiceWithSetters"));
+
+        ArrayListItemRepository arrayListItemRepository = context.getBean("arrayListItemRepository", ArrayListItemRepository.class);
+        System.out.println(arrayListItemRepository);
     }
 }

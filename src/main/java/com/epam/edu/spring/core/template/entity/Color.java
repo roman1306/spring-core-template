@@ -5,5 +5,4 @@ import org.springframework.stereotype.Component;
 @Component
 public enum Color {
     RED, GREEN, BLUE;
-
 }
